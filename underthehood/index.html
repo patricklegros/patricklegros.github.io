@@ -1,0 +1,99 @@
+<!-- Hello --> 
+
+<!DOCTYPE html>
+<html lang=en dir=ltr>
+<head>
+<!-- head -->
+<meta charset=utf-8>
+<meta name=robots content=index,follow>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<!-- meta -->
+<title>UnderTheHood visual compiler</title>
+<link rel=canonical href="/">
+<meta name=description content="">
+<!-- font/css  -->
+<link rel=stylesheet type=text/css href="http://fonts.googleapis.com/css?family=Roboto:400,300,700">
+<link rel=stylesheet type=text/css href="/underthehood/main.css">
+<!-- js -->
+<script type=text/javascript src="/underthehood/jquery.min.js"></script>
+<script type=text/javascript src="/underthehood/lang.js"></script> 
+</head>
+
+<!-- body -->
+<body id=body>
+
+<!-- header -->
+<header id=header>
+	<h1>UnderTheHood<small> proof of concept</small></h1>
+	<nav id=menu>
+		<ul>
+			<li><button class=exec onclick="run();">exec</button></li>
+			<li><button class=edit onclick="edit();">edit</button></li>
+			<li><button class=edit onclick="prevExpr();" title="previous expression">&lt;&lt;</button></li>
+			<li><button class=edit onclick="prev();" title="previous operation">&lt;</button></li>
+			<li><button class=edit onclick="next();" title="next operation">&gt;</button></li>
+			<li><button class=edit onclick="nextExpr();" title="next expression">&gt;&gt;</button></li>
+			<li><span id=msg></span></li>
+		</ul>
+	</nav>
+</header>
+
+<!-- main -->
+<main id=main>
+<div id=code contenteditable=true>/** 
+ * this is a visual compiler/executer designed for teaching, (or hit exec button to begin)
+ * everything (operation and statement that works is currently below)
+ * no specific language right now.
+ * debugger not great for syntax errors yet, but that is not my main focus currently
+ * no functions and string YET 
+ * I understand issues with this and compiled languages (undefined behavior) any JITS should be helpful
+*/
+
+// basic 7 match operators
+a = 4 * 8 + 1 % 2 + 4 - 2 * 4 + 2 ;
+b = c = +4 - - - 2 * 16 ;
+
+// ternary ( c style, there are two ways of handling ternary )
+d = 3 == 3 ? 10 : 12 ;
+d = d == 12 ? 4 + 4 : d == 10 ? 3 * 2 : 4 / 2 ; 
+
+// spaceship
+2 &lt;=&gt; 2 , 1 &lt;=&gt; 2, 2 &lt;=&gt; 1 ;
+
+// statements ( also short circuits &amp;&amp; || ) 
+if( a == 4 &amp;&amp; d == 20 &amp;&amp; a == 300 ){
+	3 * 3 ;
+}else
+	4 * 8 ;
+
+hello = 0 ;
+while( 1 ){
+	hello++;
+	if( hello == 1 )
+		continue;
+	else if( hello &gt; 3 )
+		break;
+	4 + 4 ;
+}
+
+for( i = 0; i &lt; 3 ; ++i )
+	3 * 3 ;
+
+do{
+	4 * 4 ;
+}while( false );
+
+switch( 4 ){
+	case 3:
+		4 + 4 ;
+	case 4:
+		4 + 4 ;
+	case 5:
+		5 * 5 ;
+		break ;
+	default:
+		3 * 3 ;
+}
+
+</div>
+</main>

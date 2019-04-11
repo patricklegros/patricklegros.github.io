@@ -1,0 +1,56 @@
+/* html5 + reset */
+header,nav,footer,main,section,article,aside,details {display:block;margin:0px;padding:0px;}
+html {overflow-y:scroll;}
+body {margin:0px;padding:0px;line-height:1;}
+h1,h2,h3,h4,h5,h6 {margin:0px;padding:0px;cursor:default;line-height:1;font-weight:normal;}
+ul,ol,li,dl,dt,dd {margin:0px;padding:0px;list-style-type:none;list-style-position:inside;}
+table,tbody,thead,tr,th,td {padding:0;margin:0;border-spacing:0;border-collapse:collapse;}
+th {font-weight:normal;}
+p,code,pre {padding:0;margin:0;}
+a {text-decoration:none;}
+i {font-style:normal;}
+
+/* font */
+body,input,select,textarea {font-family:"Roboto",Sans-serif;}
+
+/**** body ****/
+body {background:#F9F9FA;}
+
+/**** header ****/
+#header {position:fixed;top:0;left:0;margin:0 auto;height:48px;width:100%;margin:0 auto;
+		background:#FFF;border-bottom:solid 1px #CCC;box-shadow:0 0 3px #555;z-index:900;}
+#header h1 {float:left;padding:0 24px 0px 12px;height:48px;line-height:48px;font-size:22px;color:#25A;border-right:solid 1px #CCC;}
+#header h1 small {font-size:12px;}
+
+#menu {float:left;font-size:14px;}
+#menu ul {display:inline-block;height:48px;}
+#menu li {display:inline-block;padding:0 3px;line-height:48px;}
+#menu button.exec {}
+#menu button.edit {display:none;}
+#menu li button {}
+#menu li span {}
+
+
+/**** ****/
+#main {margin-top:50px;}
+
+#code {font-family:"Courier New",Courier,monospace;font-size:14px;line-height:16px;white-space:pre-wrap;padding:4px;}
+#code {tab-size:4;-moz-tab-size:4;-o-tab-size:4;}
+
+#code .stmt i {text-shadow:1px 1px #CCC;}
+#code .cmnt i {color:#444;font-style:italic;}
+#code .cnst i {color:#5C5;}
+#code .strg i {color:#294;}
+#code .bool i {color:#090;}
+#code .oper i {color:#555;}
+#code .idnt i {color:#999;}
+#code .punc i {color:#777;}
+
+#code span {cursor:default;}
+#code span i {color:#AAA;}
+
+#code span.mark i {color:#333;text-decoration:underline;}
+#code span.expr i {color:#555;font-weight:bold;}
+
+#code span.comment i {color:#AAA;font-style:italic;}
+#code span.error i {color:#F33;}
