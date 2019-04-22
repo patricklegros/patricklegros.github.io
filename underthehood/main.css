@@ -19,7 +19,7 @@ body {background:#F9F9FA;}
 /**** header ****/
 #header {position:fixed;top:0;left:0;margin:0 auto;height:48px;width:100%;margin:0 auto;
 		background:#FFF;border-bottom:solid 1px #CCC;box-shadow:0 0 3px #555;z-index:900;}
-#header h1 {float:left;padding:0 24px 0px 12px;height:48px;line-height:48px;font-size:22px;color:#25A;border-right:solid 1px #CCC;}
+#header h1 {float:left;padding:0 24px 0px 12px;height:48px;line-height:48px;font-size:18px;color:#25A;border-right:solid 1px #CCC;}
 #header h1 small {font-size:12px;}
 
 #menu {float:left;font-size:14px;}
@@ -27,6 +27,9 @@ body {background:#F9F9FA;}
 #menu li {display:inline-block;padding:0 3px;line-height:48px;}
 #menu button.exec {}
 #menu button.edit {display:none;}
+#menu button {
+	padding:0;
+	min-width:30px;max-width:80px;text-align:center;}
 #menu li button {}
 #menu li span {}
 
@@ -34,7 +37,7 @@ body {background:#F9F9FA;}
 /**** ****/
 #main {margin-top:50px;}
 
-#code {font-family:"Courier New",Courier,monospace;font-size:14px;line-height:16px;white-space:pre-wrap;padding:4px;}
+#code {font-family:"Courier New",Courier,monospace;font-size:16px;line-height:16px;white-space:pre-wrap;padding:4px;}
 #code {tab-size:4;-moz-tab-size:4;-o-tab-size:4;}
 
 #code .stmt i {text-shadow:1px 1px #CCC;}
